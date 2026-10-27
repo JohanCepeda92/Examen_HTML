@@ -1,0 +1,491 @@
+/* ECOMARKET - COMPONENTES VISUALES
+   Archivo: components.css */
+
+/* 1. ENLACES DE NAVEGACIÓN */
+
+.nav__link {
+    color: var(--color-text);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color var(--transition-normal);
+}
+
+.nav__link:hover,
+.nav__link--active {
+    color: var(--color-primary);
+}
+
+.nav__link--active {
+    font-weight: 700;
+}
+
+/* 2. ICONOS DEL ENCABEZADO */
+
+.header__icon {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    color: var(--color-primary-dark);
+    font-size: 1.35rem;
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal);
+}
+
+.header__icon:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+
+/* 3. BOTONES GENERALES */
+
+.btn {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.8rem 1.4rem;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal),
+        border-color var(--transition-normal);
+}
+
+
+/* Botón principal */
+
+.btn--primary {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+
+/* Botón secundario con contorno */
+
+.btn--outline {
+    color: var(--color-primary-dark);
+    background-color: transparent;
+    border-color: var(--color-primary);
+}
+
+.btn--outline:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+
+/* Botón claro para fondos oscuros */
+
+.btn--light {
+    color: var(--color-primary-dark);
+    background-color: var(--color-white);
+}
+
+.btn--light:hover {
+    color: var(--color-white);
+    background-color: var(--color-earth);
+}
+
+
+/* 4. TARJETAS DE PRODUCTOS */
+
+.product-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-card);
+    transition:
+        box-shadow var(--transition-normal),
+        border-color var(--transition-normal);
+}
+
+
+/* Imagen de la tarjeta */
+
+.product-card__image {
+    overflow: hidden;
+    background-color: var(--color-primary-light);
+}
+
+.product-card__image img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+
+/* Información del producto */
+
+.product-card__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.35rem;
+}
+
+.product-card__category {
+    display: inline-block;
+    margin-bottom: 0.65rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    color: var(--color-primary-dark);
+    background-color: var(--color-primary-light);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.product-card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+.product-card p {
+    flex: 1;
+    margin-bottom: 1.25rem;
+    color: var(--color-text-light);
+    font-size: 0.92rem;
+}
+
+
+/* 5. FORMULARIOS */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.form-control {
+    width: 100%;
+    min-height: 46px;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    background-color: var(--color-white);
+    transition:
+        border-color var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-control:focus {
+    border-color: var(--color-primary);
+    outline: 2px solid transparent;
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.15);
+}
+
+
+/* 6. ELEMENTOS REUTILIZABLES */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.badge--available {
+    color: #176b37;
+    background-color: #e3f5e8;
+}
+
+.badge--unavailable {
+    color: #a12626;
+    background-color: #fde8e8;
+}
+
+
+/* 7. ENLACES DEL PIE DE PÁGINA */
+
+.footer__column a {
+    transition: color var(--transition-normal);
+}
+
+.footer__column a:hover {
+    color: var(--color-primary-dark);
+}
+
+
+/* 8. REDES SOCIALES */
+
+.footer__social a {
+    display: inline-block;
+    color: var(--color-text);
+    transition:
+        color var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.footer__social a:hover {
+    color: var(--color-primary-dark);
+}
+
+
+/* 9. ACCESIBILIDAD */
+
+.btn:focus-visible,
+.nav__link:focus-visible,
+.header__icon:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+
+/* 10. AJUSTES PARA MÓVILES */
+
+@media (max-width: 480px) {
+
+    .btn {
+        padding: 0.75rem 1.1rem;
+        font-size: 0.9rem;
+    }
+
+    .product-card__content {
+        padding: 1.1rem;
+    }
+
+}
+
+/* FAVORITOS DEL CATÁLOGO */
+
+.favorite-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.favorite-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    color: var(--color-text-light);
+    background-color: var(--color-white);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition:
+        color var(--transition-normal),
+        background-color var(--transition-normal),
+        border-color var(--transition-normal);
+}
+
+.favorite-button:hover,
+.favorite-input:checked + .favorite-button {
+    border-color: #e9a0a0;
+    color: #c73535;
+    background-color: #fff0f0;
+}
+
+.favorite-input:focus-visible + .favorite-button {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+/* =========================================
+   COMPONENTES DE SOBRE NOSOTROS
+   ========================================= */
+
+.mission-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.mission-card,
+.value-card {
+    height: 100%;
+}
+
+.mission-card,
+.value-card,
+.testimonial-card {
+    padding: 1.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-large);
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-card);
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.mission-card__icon,
+.value-card__icon {
+    display: inline-flex;
+    width: 3.5rem;
+    height: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    border-radius: 50%;
+    background-color: var(--color-primary-light);
+    font-size: 1.7rem;
+}
+
+.mission-card h2,
+.value-card h3 {
+    margin-bottom: 0.85rem;
+}
+
+.mission-card p,
+.value-card p {
+    color: var(--color-text-light);
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 0 0 320px;
+    width: 320px;
+    min-width: 0;
+}
+
+.testimonial-card__person {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-card__person img {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-card__person h3 {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.testimonial-card__person span {
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+}
+
+.testimonial-card__stars {
+    color: #d69e16;
+    letter-spacing: 3px;
+}
+
+.testimonial-card blockquote {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+
+    .mission-card:hover,
+    .value-card:hover,
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 30px rgba(30, 60, 40, 0.12);
+    }
+
+}
+
+/* VALIDACIÓN VISUAL DEL FORMULARIO DE CONTACTO */
+
+.contact-form .form-control:required:invalid:not(:placeholder-shown) {
+.contact-form .form-control:required:invalid {
+    border-color: #d64545;
+}
+
+.contact-form .form-control:required:valid {
+    border-color: #27ae60;
+}
+
+.contact-form .form-control:focus:required:invalid:not(:placeholder-shown) {
+.contact-form .form-control:focus:required:invalid {
+    box-shadow: 0 0 0 3px rgba(214, 69, 69, 0.12);
+}
+
+.contact-form .form-control:focus:required:valid {
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.15);
+}
+
+/* Redes sociales */
+
+.contact-social__links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background-color: var(--color-white);
+    font-size: 0.9rem;
+    transition:
+        color var(--transition-normal),
+        background-color var(--transition-normal),
+        border-color var(--transition-normal),
+        transform var(--transition-normal);
+}
+
+.contact-social__links a:hover {
+    color: var(--color-primary-dark);
+    border-color: var(--color-primary);
+    background-color: var(--color-primary-light);
+}
+
+/* ADAPTACIÓN A MÓVILES */
+
+@media (max-width: 600px) {
+
+    .testimonial-viewport {
+        padding-inline: max(
+            0px,
+            calc((100% - min(82vw, 320px)) / 2)
+        );
+    }
+
+    .testimonial-card {
+        flex-basis: min(82vw, 320px);
+        width: min(82vw, 320px);
+    }
+
+}
+
+.mission-card__icon svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    color: var(--color-primary-dark);
+}
