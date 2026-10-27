@@ -175,3 +175,5 @@ EcoMarket está disponible en línea:
 ## Contexto académico
 
 EcoMarket es un proyecto académico desarrollado con fines educativos.
+
+Commit de prueba 
